@@ -10,33 +10,389 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AssistanceMedicaleRouteImport } from './routes/assistance-medicale'
+import { Route as CalendrierRouteImport } from './routes/calendrier'
+import { Route as CarriereRouteImport } from './routes/carriere'
+import { Route as ConditionsAdmissionRouteImport } from './routes/conditions-admission'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CyclesRouteImport } from './routes/cycles'
+import { Route as EchecsRouteImport } from './routes/echecs'
+import { Route as EvenementsRouteImport } from './routes/evenements'
+import { Route as FournituresManuelsRouteImport } from './routes/fournitures-manuels'
+import { Route as FraisDeScolariteRouteImport } from './routes/frais-de-scolarite'
+import { Route as HorairesRouteImport } from './routes/horaires'
+import { Route as InscriptionRouteImport } from './routes/inscription'
+import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
+import { Route as MissionRouteImport } from './routes/mission'
+import { Route as MusiqueRouteImport } from './routes/musique'
+import { Route as NosElevesRouteImport } from './routes/nos-eleves'
+import { Route as NoteDeRentree20252026RouteImport } from './routes/note-de-rentree-2025-2026'
+import { Route as PhotosRouteImport } from './routes/photos'
+import { Route as PolitiqueDeConfidentialiteRouteImport } from './routes/politique-de-confidentialite'
+import { Route as ProjetEcoleRouteImport } from './routes/projet-ecole'
+import { Route as ReglementInterieurRouteImport } from './routes/reglement-interieur'
+import { Route as RestaurationRouteImport } from './routes/restauration'
+import { Route as SportRouteImport } from './routes/sport'
+import { Route as TheatreRouteImport } from './routes/theatre'
+import { Route as TransportScolaireRouteImport } from './routes/transport-scolaire'
+import { Route as VacancesScolairesRouteImport } from './routes/vacances-scolaires'
+import { Route as VideosRouteImport } from './routes/videos'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AssistanceMedicaleRoute = AssistanceMedicaleRouteImport.update({
+  id: '/assistance-medicale',
+  path: '/assistance-medicale',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CalendrierRoute = CalendrierRouteImport.update({
+  id: '/calendrier',
+  path: '/calendrier',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CarriereRoute = CarriereRouteImport.update({
+  id: '/carriere',
+  path: '/carriere',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConditionsAdmissionRoute = ConditionsAdmissionRouteImport.update({
+  id: '/conditions-admission',
+  path: '/conditions-admission',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CyclesRoute = CyclesRouteImport.update({
+  id: '/cycles',
+  path: '/cycles',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EchecsRoute = EchecsRouteImport.update({
+  id: '/echecs',
+  path: '/echecs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EvenementsRoute = EvenementsRouteImport.update({
+  id: '/evenements',
+  path: '/evenements',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FournituresManuelsRoute = FournituresManuelsRouteImport.update({
+  id: '/fournitures-manuels',
+  path: '/fournitures-manuels',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FraisDeScolariteRoute = FraisDeScolariteRouteImport.update({
+  id: '/frais-de-scolarite',
+  path: '/frais-de-scolarite',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HorairesRoute = HorairesRouteImport.update({
+  id: '/horaires',
+  path: '/horaires',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InscriptionRoute = InscriptionRouteImport.update({
+  id: '/inscription',
+  path: '/inscription',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MentionsLegalesRoute = MentionsLegalesRouteImport.update({
+  id: '/mentions-legales',
+  path: '/mentions-legales',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MissionRoute = MissionRouteImport.update({
+  id: '/mission',
+  path: '/mission',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MusiqueRoute = MusiqueRouteImport.update({
+  id: '/musique',
+  path: '/musique',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NosElevesRoute = NosElevesRouteImport.update({
+  id: '/nos-eleves',
+  path: '/nos-eleves',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NoteDeRentree20252026Route = NoteDeRentree20252026RouteImport.update({
+  id: '/note-de-rentree-2025-2026',
+  path: '/note-de-rentree-2025-2026',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhotosRoute = PhotosRouteImport.update({
+  id: '/photos',
+  path: '/photos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PolitiqueDeConfidentialiteRoute =
+  PolitiqueDeConfidentialiteRouteImport.update({
+    id: '/politique-de-confidentialite',
+    path: '/politique-de-confidentialite',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProjetEcoleRoute = ProjetEcoleRouteImport.update({
+  id: '/projet-ecole',
+  path: '/projet-ecole',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReglementInterieurRoute = ReglementInterieurRouteImport.update({
+  id: '/reglement-interieur',
+  path: '/reglement-interieur',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RestaurationRoute = RestaurationRouteImport.update({
+  id: '/restauration',
+  path: '/restauration',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SportRoute = SportRouteImport.update({
+  id: '/sport',
+  path: '/sport',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TheatreRoute = TheatreRouteImport.update({
+  id: '/theatre',
+  path: '/theatre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TransportScolaireRoute = TransportScolaireRouteImport.update({
+  id: '/transport-scolaire',
+  path: '/transport-scolaire',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VacancesScolairesRoute = VacancesScolairesRouteImport.update({
+  id: '/vacances-scolaires',
+  path: '/vacances-scolaires',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VideosRoute = VideosRouteImport.update({
+  id: '/videos',
+  path: '/videos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/assistance-medicale': typeof AssistanceMedicaleRoute
+  '/calendrier': typeof CalendrierRoute
+  '/carriere': typeof CarriereRoute
+  '/conditions-admission': typeof ConditionsAdmissionRoute
+  '/contact': typeof ContactRoute
+  '/cycles': typeof CyclesRoute
+  '/echecs': typeof EchecsRoute
+  '/evenements': typeof EvenementsRoute
+  '/fournitures-manuels': typeof FournituresManuelsRoute
+  '/frais-de-scolarite': typeof FraisDeScolariteRoute
+  '/horaires': typeof HorairesRoute
+  '/inscription': typeof InscriptionRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/mission': typeof MissionRoute
+  '/musique': typeof MusiqueRoute
+  '/nos-eleves': typeof NosElevesRoute
+  '/note-de-rentree-2025-2026': typeof NoteDeRentree20252026Route
+  '/photos': typeof PhotosRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
+  '/projet-ecole': typeof ProjetEcoleRoute
+  '/reglement-interieur': typeof ReglementInterieurRoute
+  '/restauration': typeof RestaurationRoute
+  '/sport': typeof SportRoute
+  '/theatre': typeof TheatreRoute
+  '/transport-scolaire': typeof TransportScolaireRoute
+  '/vacances-scolaires': typeof VacancesScolairesRoute
+  '/videos': typeof VideosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/assistance-medicale': typeof AssistanceMedicaleRoute
+  '/calendrier': typeof CalendrierRoute
+  '/carriere': typeof CarriereRoute
+  '/conditions-admission': typeof ConditionsAdmissionRoute
+  '/contact': typeof ContactRoute
+  '/cycles': typeof CyclesRoute
+  '/echecs': typeof EchecsRoute
+  '/evenements': typeof EvenementsRoute
+  '/fournitures-manuels': typeof FournituresManuelsRoute
+  '/frais-de-scolarite': typeof FraisDeScolariteRoute
+  '/horaires': typeof HorairesRoute
+  '/inscription': typeof InscriptionRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/mission': typeof MissionRoute
+  '/musique': typeof MusiqueRoute
+  '/nos-eleves': typeof NosElevesRoute
+  '/note-de-rentree-2025-2026': typeof NoteDeRentree20252026Route
+  '/photos': typeof PhotosRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
+  '/projet-ecole': typeof ProjetEcoleRoute
+  '/reglement-interieur': typeof ReglementInterieurRoute
+  '/restauration': typeof RestaurationRoute
+  '/sport': typeof SportRoute
+  '/theatre': typeof TheatreRoute
+  '/transport-scolaire': typeof TransportScolaireRoute
+  '/vacances-scolaires': typeof VacancesScolairesRoute
+  '/videos': typeof VideosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/assistance-medicale': typeof AssistanceMedicaleRoute
+  '/calendrier': typeof CalendrierRoute
+  '/carriere': typeof CarriereRoute
+  '/conditions-admission': typeof ConditionsAdmissionRoute
+  '/contact': typeof ContactRoute
+  '/cycles': typeof CyclesRoute
+  '/echecs': typeof EchecsRoute
+  '/evenements': typeof EvenementsRoute
+  '/fournitures-manuels': typeof FournituresManuelsRoute
+  '/frais-de-scolarite': typeof FraisDeScolariteRoute
+  '/horaires': typeof HorairesRoute
+  '/inscription': typeof InscriptionRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/mission': typeof MissionRoute
+  '/musique': typeof MusiqueRoute
+  '/nos-eleves': typeof NosElevesRoute
+  '/note-de-rentree-2025-2026': typeof NoteDeRentree20252026Route
+  '/photos': typeof PhotosRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
+  '/projet-ecole': typeof ProjetEcoleRoute
+  '/reglement-interieur': typeof ReglementInterieurRoute
+  '/restauration': typeof RestaurationRoute
+  '/sport': typeof SportRoute
+  '/theatre': typeof TheatreRoute
+  '/transport-scolaire': typeof TransportScolaireRoute
+  '/vacances-scolaires': typeof VacancesScolairesRoute
+  '/videos': typeof VideosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/assistance-medicale'
+    | '/calendrier'
+    | '/carriere'
+    | '/conditions-admission'
+    | '/contact'
+    | '/cycles'
+    | '/echecs'
+    | '/evenements'
+    | '/fournitures-manuels'
+    | '/frais-de-scolarite'
+    | '/horaires'
+    | '/inscription'
+    | '/mentions-legales'
+    | '/mission'
+    | '/musique'
+    | '/nos-eleves'
+    | '/note-de-rentree-2025-2026'
+    | '/photos'
+    | '/politique-de-confidentialite'
+    | '/projet-ecole'
+    | '/reglement-interieur'
+    | '/restauration'
+    | '/sport'
+    | '/theatre'
+    | '/transport-scolaire'
+    | '/vacances-scolaires'
+    | '/videos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/assistance-medicale'
+    | '/calendrier'
+    | '/carriere'
+    | '/conditions-admission'
+    | '/contact'
+    | '/cycles'
+    | '/echecs'
+    | '/evenements'
+    | '/fournitures-manuels'
+    | '/frais-de-scolarite'
+    | '/horaires'
+    | '/inscription'
+    | '/mentions-legales'
+    | '/mission'
+    | '/musique'
+    | '/nos-eleves'
+    | '/note-de-rentree-2025-2026'
+    | '/photos'
+    | '/politique-de-confidentialite'
+    | '/projet-ecole'
+    | '/reglement-interieur'
+    | '/restauration'
+    | '/sport'
+    | '/theatre'
+    | '/transport-scolaire'
+    | '/vacances-scolaires'
+    | '/videos'
+  id:
+    | '__root__'
+    | '/'
+    | '/assistance-medicale'
+    | '/calendrier'
+    | '/carriere'
+    | '/conditions-admission'
+    | '/contact'
+    | '/cycles'
+    | '/echecs'
+    | '/evenements'
+    | '/fournitures-manuels'
+    | '/frais-de-scolarite'
+    | '/horaires'
+    | '/inscription'
+    | '/mentions-legales'
+    | '/mission'
+    | '/musique'
+    | '/nos-eleves'
+    | '/note-de-rentree-2025-2026'
+    | '/photos'
+    | '/politique-de-confidentialite'
+    | '/projet-ecole'
+    | '/reglement-interieur'
+    | '/restauration'
+    | '/sport'
+    | '/theatre'
+    | '/transport-scolaire'
+    | '/vacances-scolaires'
+    | '/videos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AssistanceMedicaleRoute: typeof AssistanceMedicaleRoute
+  CalendrierRoute: typeof CalendrierRoute
+  CarriereRoute: typeof CarriereRoute
+  ConditionsAdmissionRoute: typeof ConditionsAdmissionRoute
+  ContactRoute: typeof ContactRoute
+  CyclesRoute: typeof CyclesRoute
+  EchecsRoute: typeof EchecsRoute
+  EvenementsRoute: typeof EvenementsRoute
+  FournituresManuelsRoute: typeof FournituresManuelsRoute
+  FraisDeScolariteRoute: typeof FraisDeScolariteRoute
+  HorairesRoute: typeof HorairesRoute
+  InscriptionRoute: typeof InscriptionRoute
+  MentionsLegalesRoute: typeof MentionsLegalesRoute
+  MissionRoute: typeof MissionRoute
+  MusiqueRoute: typeof MusiqueRoute
+  NosElevesRoute: typeof NosElevesRoute
+  NoteDeRentree20252026Route: typeof NoteDeRentree20252026Route
+  PhotosRoute: typeof PhotosRoute
+  PolitiqueDeConfidentialiteRoute: typeof PolitiqueDeConfidentialiteRoute
+  ProjetEcoleRoute: typeof ProjetEcoleRoute
+  ReglementInterieurRoute: typeof ReglementInterieurRoute
+  RestaurationRoute: typeof RestaurationRoute
+  SportRoute: typeof SportRoute
+  TheatreRoute: typeof TheatreRoute
+  TransportScolaireRoute: typeof TransportScolaireRoute
+  VacancesScolairesRoute: typeof VacancesScolairesRoute
+  VideosRoute: typeof VideosRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +404,227 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/assistance-medicale': {
+      id: '/assistance-medicale'
+      path: '/assistance-medicale'
+      fullPath: '/assistance-medicale'
+      preLoaderRoute: typeof AssistanceMedicaleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/calendrier': {
+      id: '/calendrier'
+      path: '/calendrier'
+      fullPath: '/calendrier'
+      preLoaderRoute: typeof CalendrierRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/carriere': {
+      id: '/carriere'
+      path: '/carriere'
+      fullPath: '/carriere'
+      preLoaderRoute: typeof CarriereRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conditions-admission': {
+      id: '/conditions-admission'
+      path: '/conditions-admission'
+      fullPath: '/conditions-admission'
+      preLoaderRoute: typeof ConditionsAdmissionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cycles': {
+      id: '/cycles'
+      path: '/cycles'
+      fullPath: '/cycles'
+      preLoaderRoute: typeof CyclesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/echecs': {
+      id: '/echecs'
+      path: '/echecs'
+      fullPath: '/echecs'
+      preLoaderRoute: typeof EchecsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/evenements': {
+      id: '/evenements'
+      path: '/evenements'
+      fullPath: '/evenements'
+      preLoaderRoute: typeof EvenementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fournitures-manuels': {
+      id: '/fournitures-manuels'
+      path: '/fournitures-manuels'
+      fullPath: '/fournitures-manuels'
+      preLoaderRoute: typeof FournituresManuelsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/frais-de-scolarite': {
+      id: '/frais-de-scolarite'
+      path: '/frais-de-scolarite'
+      fullPath: '/frais-de-scolarite'
+      preLoaderRoute: typeof FraisDeScolariteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/horaires': {
+      id: '/horaires'
+      path: '/horaires'
+      fullPath: '/horaires'
+      preLoaderRoute: typeof HorairesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/inscription': {
+      id: '/inscription'
+      path: '/inscription'
+      fullPath: '/inscription'
+      preLoaderRoute: typeof InscriptionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mentions-legales': {
+      id: '/mentions-legales'
+      path: '/mentions-legales'
+      fullPath: '/mentions-legales'
+      preLoaderRoute: typeof MentionsLegalesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mission': {
+      id: '/mission'
+      path: '/mission'
+      fullPath: '/mission'
+      preLoaderRoute: typeof MissionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/musique': {
+      id: '/musique'
+      path: '/musique'
+      fullPath: '/musique'
+      preLoaderRoute: typeof MusiqueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nos-eleves': {
+      id: '/nos-eleves'
+      path: '/nos-eleves'
+      fullPath: '/nos-eleves'
+      preLoaderRoute: typeof NosElevesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/note-de-rentree-2025-2026': {
+      id: '/note-de-rentree-2025-2026'
+      path: '/note-de-rentree-2025-2026'
+      fullPath: '/note-de-rentree-2025-2026'
+      preLoaderRoute: typeof NoteDeRentree20252026RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/photos': {
+      id: '/photos'
+      path: '/photos'
+      fullPath: '/photos'
+      preLoaderRoute: typeof PhotosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politique-de-confidentialite': {
+      id: '/politique-de-confidentialite'
+      path: '/politique-de-confidentialite'
+      fullPath: '/politique-de-confidentialite'
+      preLoaderRoute: typeof PolitiqueDeConfidentialiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projet-ecole': {
+      id: '/projet-ecole'
+      path: '/projet-ecole'
+      fullPath: '/projet-ecole'
+      preLoaderRoute: typeof ProjetEcoleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reglement-interieur': {
+      id: '/reglement-interieur'
+      path: '/reglement-interieur'
+      fullPath: '/reglement-interieur'
+      preLoaderRoute: typeof ReglementInterieurRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/restauration': {
+      id: '/restauration'
+      path: '/restauration'
+      fullPath: '/restauration'
+      preLoaderRoute: typeof RestaurationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sport': {
+      id: '/sport'
+      path: '/sport'
+      fullPath: '/sport'
+      preLoaderRoute: typeof SportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/theatre': {
+      id: '/theatre'
+      path: '/theatre'
+      fullPath: '/theatre'
+      preLoaderRoute: typeof TheatreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/transport-scolaire': {
+      id: '/transport-scolaire'
+      path: '/transport-scolaire'
+      fullPath: '/transport-scolaire'
+      preLoaderRoute: typeof TransportScolaireRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vacances-scolaires': {
+      id: '/vacances-scolaires'
+      path: '/vacances-scolaires'
+      fullPath: '/vacances-scolaires'
+      preLoaderRoute: typeof VacancesScolairesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/videos': {
+      id: '/videos'
+      path: '/videos'
+      fullPath: '/videos'
+      preLoaderRoute: typeof VideosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AssistanceMedicaleRoute: AssistanceMedicaleRoute,
+  CalendrierRoute: CalendrierRoute,
+  CarriereRoute: CarriereRoute,
+  ConditionsAdmissionRoute: ConditionsAdmissionRoute,
+  ContactRoute: ContactRoute,
+  CyclesRoute: CyclesRoute,
+  EchecsRoute: EchecsRoute,
+  EvenementsRoute: EvenementsRoute,
+  FournituresManuelsRoute: FournituresManuelsRoute,
+  FraisDeScolariteRoute: FraisDeScolariteRoute,
+  HorairesRoute: HorairesRoute,
+  InscriptionRoute: InscriptionRoute,
+  MentionsLegalesRoute: MentionsLegalesRoute,
+  MissionRoute: MissionRoute,
+  MusiqueRoute: MusiqueRoute,
+  NosElevesRoute: NosElevesRoute,
+  NoteDeRentree20252026Route: NoteDeRentree20252026Route,
+  PhotosRoute: PhotosRoute,
+  PolitiqueDeConfidentialiteRoute: PolitiqueDeConfidentialiteRoute,
+  ProjetEcoleRoute: ProjetEcoleRoute,
+  ReglementInterieurRoute: ReglementInterieurRoute,
+  RestaurationRoute: RestaurationRoute,
+  SportRoute: SportRoute,
+  TheatreRoute: TheatreRoute,
+  TransportScolaireRoute: TransportScolaireRoute,
+  VacancesScolairesRoute: VacancesScolairesRoute,
+  VideosRoute: VideosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
