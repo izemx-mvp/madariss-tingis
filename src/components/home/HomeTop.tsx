@@ -210,8 +210,8 @@ export function Cycles() {
             )}
           >
             <img
-              src={cycleImages[i].src}
-              alt={cycleImages[i].alt}
+              src={cycleImages[i]!.src}
+              alt={cycleImages[i]!.alt}
               loading="lazy"
               width={1200}
               height={912}

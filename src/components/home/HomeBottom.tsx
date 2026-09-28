@@ -49,14 +49,14 @@ export function Chiffres() {
 
 /* 7 — Une journée à Madariss Tingis */
 export function Journee() {
-  const [level, setLevel] = useState(schedules[1].id);
-  const current = schedules.find((s) => s.id === level) ?? schedules[0];
+  const [level, setLevel] = useState("primaire");
+  const current = schedules.find((s) => s.id === level) ?? schedules[0]!;
 
   const steps = [
     { time: doors.open, label: "Ouverture des portes" },
-    { time: current.week.split(": ")[1].split(" – ")[0], label: "Début des cours" },
+    { time: current.start, label: "Début des cours" },
     { time: doors.close, label: "Fermeture des portes" },
-    { time: current.week.split(" – ")[1], label: "Fin de journée (lun–jeu)" },
+    { time: current.end, label: "Fin de journée (lun–jeu)" },
   ];
 
   return (
@@ -109,10 +109,10 @@ export function Journee() {
         </ol>
         <div className="mt-8 grid gap-3 rounded-2xl bg-sand p-5 text-sm md:grid-cols-2">
           <p>
-            <strong>Lundi à jeudi :</strong> {current.week.split(": ")[1]}
+            <strong>Lundi à jeudi :</strong> {current.start} – {current.end}
           </p>
           <p>
-            <strong>Vendredi :</strong> {current.friday.split(": ")[1]}
+            <strong>Vendredi :</strong> {current.fridayStart} – {current.fridayEnd}
           </p>
         </div>
         <div className="mt-6">

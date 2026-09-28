@@ -117,13 +117,13 @@ export function ArabicWatermark({ className, text = "مدارس طنجيس" }: {
 /* ---------------- Boutons ---------------- */
 
 type ActionProps = {
-  to?: string;
-  href?: string;
+  to?: string | undefined;
+  href?: string | undefined;
   children: ReactNode;
   variant?: "primary" | "secondary" | "tertiary" | "light";
-  className?: string;
+  className?: string | undefined;
   arrow?: boolean;
-  onClick?: () => void;
+  onClick?: (() => void) | undefined;
   type?: "button" | "submit";
 };
 

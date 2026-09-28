@@ -92,31 +92,20 @@ export const cycles: Cycle[] = [
   },
 ];
 
-export const schedules = [
-  {
-    id: "maternelle",
-    label: "Maternelle",
-    week: "Lundi à jeudi : 8h30 – 15h30",
-    friday: "Vendredi : 8h30 – 13h30",
-  },
-  {
-    id: "primaire",
-    label: "Primaire (sauf 6e)",
-    week: "Lundi à jeudi : 8h30 – 15h30",
-    friday: "Vendredi : 8h30 – 13h30",
-  },
-  {
-    id: "college",
-    label: "Collège & 6e",
-    week: "Lundi à jeudi : 8h00 – 16h00",
-    friday: "Vendredi : 8h30 – 13h30",
-  },
-  {
-    id: "lycee",
-    label: "Lycée",
-    week: "Lundi à jeudi : 8h30 – 15h30",
-    friday: "Vendredi : 8h30 – 13h30",
-  },
+export type Schedule = {
+  id: string;
+  label: string;
+  start: string;
+  end: string;
+  fridayStart: string;
+  fridayEnd: string;
+};
+
+export const schedules: Schedule[] = [
+  { id: "maternelle", label: "Maternelle", start: "8h30", end: "15h30", fridayStart: "8h30", fridayEnd: "13h30" },
+  { id: "primaire", label: "Primaire (sauf 6e)", start: "8h30", end: "15h30", fridayStart: "8h30", fridayEnd: "13h30" },
+  { id: "college", label: "Collège & 6e", start: "8h00", end: "16h00", fridayStart: "8h30", fridayEnd: "13h30" },
+  { id: "lycee", label: "Lycée", start: "8h30", end: "15h30", fridayStart: "8h30", fridayEnd: "13h30" },
 ];
 
 export const doors = {
