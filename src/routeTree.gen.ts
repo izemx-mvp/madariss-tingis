@@ -37,6 +37,7 @@ import { Route as TheatreRouteImport } from './routes/theatre'
 import { Route as TransportScolaireRouteImport } from './routes/transport-scolaire'
 import { Route as VacancesScolairesRouteImport } from './routes/vacances-scolaires'
 import { Route as VideosRouteImport } from './routes/videos'
+import { Route as EvenementsSlugRouteImport } from './routes/evenements.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -179,6 +180,11 @@ const VideosRoute = VideosRouteImport.update({
   path: '/videos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EvenementsSlugRoute = EvenementsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => EvenementsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -189,7 +195,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/cycles': typeof CyclesRoute
   '/echecs': typeof EchecsRoute
-  '/evenements': typeof EvenementsRoute
+  '/evenements': typeof EvenementsRouteWithChildren
   '/fournitures-manuels': typeof FournituresManuelsRoute
   '/frais-de-scolarite': typeof FraisDeScolariteRoute
   '/horaires': typeof HorairesRoute
@@ -209,6 +215,7 @@ export interface FileRoutesByFullPath {
   '/transport-scolaire': typeof TransportScolaireRoute
   '/vacances-scolaires': typeof VacancesScolairesRoute
   '/videos': typeof VideosRoute
+  '/evenements/$slug': typeof EvenementsSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -219,7 +226,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/cycles': typeof CyclesRoute
   '/echecs': typeof EchecsRoute
-  '/evenements': typeof EvenementsRoute
+  '/evenements': typeof EvenementsRouteWithChildren
   '/fournitures-manuels': typeof FournituresManuelsRoute
   '/frais-de-scolarite': typeof FraisDeScolariteRoute
   '/horaires': typeof HorairesRoute
@@ -239,6 +246,7 @@ export interface FileRoutesByTo {
   '/transport-scolaire': typeof TransportScolaireRoute
   '/vacances-scolaires': typeof VacancesScolairesRoute
   '/videos': typeof VideosRoute
+  '/evenements/$slug': typeof EvenementsSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -250,7 +258,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/cycles': typeof CyclesRoute
   '/echecs': typeof EchecsRoute
-  '/evenements': typeof EvenementsRoute
+  '/evenements': typeof EvenementsRouteWithChildren
   '/fournitures-manuels': typeof FournituresManuelsRoute
   '/frais-de-scolarite': typeof FraisDeScolariteRoute
   '/horaires': typeof HorairesRoute
@@ -270,6 +278,7 @@ export interface FileRoutesById {
   '/transport-scolaire': typeof TransportScolaireRoute
   '/vacances-scolaires': typeof VacancesScolairesRoute
   '/videos': typeof VideosRoute
+  '/evenements/$slug': typeof EvenementsSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -302,6 +311,7 @@ export interface FileRouteTypes {
     | '/transport-scolaire'
     | '/vacances-scolaires'
     | '/videos'
+    | '/evenements/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -332,6 +342,7 @@ export interface FileRouteTypes {
     | '/transport-scolaire'
     | '/vacances-scolaires'
     | '/videos'
+    | '/evenements/$slug'
   id:
     | '__root__'
     | '/'
@@ -362,6 +373,7 @@ export interface FileRouteTypes {
     | '/transport-scolaire'
     | '/vacances-scolaires'
     | '/videos'
+    | '/evenements/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -373,7 +385,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   CyclesRoute: typeof CyclesRoute
   EchecsRoute: typeof EchecsRoute
-  EvenementsRoute: typeof EvenementsRoute
+  EvenementsRoute: typeof EvenementsRouteWithChildren
   FournituresManuelsRoute: typeof FournituresManuelsRoute
   FraisDeScolariteRoute: typeof FraisDeScolariteRoute
   HorairesRoute: typeof HorairesRoute
@@ -593,8 +605,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VideosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/evenements/$slug': {
+      id: '/evenements/$slug'
+      path: '/$slug'
+      fullPath: '/evenements/$slug'
+      preLoaderRoute: typeof EvenementsSlugRouteImport
+      parentRoute: typeof EvenementsRoute
+    }
   }
 }
+
+interface EvenementsRouteChildren {
+  EvenementsSlugRoute: typeof EvenementsSlugRoute
+}
+
+const EvenementsRouteChildren: EvenementsRouteChildren = {
+  EvenementsSlugRoute: EvenementsSlugRoute,
+}
+
+const EvenementsRouteWithChildren = EvenementsRoute._addFileChildren(
+  EvenementsRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -605,7 +636,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   CyclesRoute: CyclesRoute,
   EchecsRoute: EchecsRoute,
-  EvenementsRoute: EvenementsRoute,
+  EvenementsRoute: EvenementsRouteWithChildren,
   FournituresManuelsRoute: FournituresManuelsRoute,
   FraisDeScolariteRoute: FraisDeScolariteRoute,
   HorairesRoute: HorairesRoute,
