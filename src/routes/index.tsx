@@ -1,24 +1,47 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { MarqueeStrip } from "@/components/site/blocks/MarqueeStrip";
+import { Cycles, Hero, Mission, Vision } from "@/components/home/HomeTop";
+import {
+  AuDelaDesCours,
+  Chiffres,
+  EspaceParents,
+  InscriptionBand,
+  Journee,
+  Langues,
+  MotEtEvenement,
+} from "@/components/home/HomeBottom";
+import { marqueeValues } from "@/data/site";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const description =
+  "Madariss Tingis, école privée à Tanger : maternelle, primaire, collège et lycée. Programme marocain officiel, français renforcé, anglais et activités périscolaires.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Madariss Tingis — École privée à Tanger, de la maternelle au lycée" },
+      { name: "description", content: description },
+      { property: "og:title", content: "Madariss Tingis — École privée à Tanger" },
+      { property: "og:description", content: description },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Hero />
+      <MarqueeStrip items={marqueeValues} />
+      <Vision />
+      <Mission />
+      <Cycles />
+      <Chiffres />
+      <Journee />
+      <Langues />
+      <AuDelaDesCours />
+      <EspaceParents />
+      <MotEtEvenement />
+      <InscriptionBand />
+    </>
   );
 }
