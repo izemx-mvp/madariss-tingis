@@ -159,7 +159,7 @@ export function Action({
 
   if (to) {
     return (
-      <Link to={to} className={cls}>
+      <Link to={to as never} className={cls}>
         {content}
       </Link>
     );
