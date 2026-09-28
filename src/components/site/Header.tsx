@@ -96,7 +96,7 @@ export function Header() {
                 <Link
                   key={group.label}
                   to={group.to as never}
-                  className="rounded-full px-3 py-2 text-sm font-semibold text-ink-900 transition-colors hover:text-coral-700"
+                  className="rounded-full px-2.5 py-2 text-sm font-semibold whitespace-nowrap text-ink-900 transition-colors hover:text-coral-700"
                   activeProps={{ className: "text-coral-700" }}
                 >
                   {group.label}
@@ -107,7 +107,7 @@ export function Header() {
                     type="button"
                     aria-expanded={open === group.label}
                     onClick={() => setOpen(open === group.label ? null : group.label)}
-                    className="inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-semibold text-ink-900 transition-colors hover:text-coral-700"
+                    className="inline-flex items-center gap-1 rounded-full px-2.5 py-2 text-sm font-semibold whitespace-nowrap text-ink-900 transition-colors hover:text-coral-700"
                   >
                     {group.label}
                     <ChevronDown className="size-4" strokeWidth={1.75} />
@@ -117,7 +117,7 @@ export function Header() {
             )}
             <Link
               to="/inscription"
-              className="ml-2 rounded-full bg-coral-600 px-5 py-2.5 text-sm font-bold text-white shadow-soft transition-colors hover:bg-coral-700"
+              className="ml-2 rounded-full bg-coral-600 px-4 py-2.5 text-sm font-bold whitespace-nowrap text-white shadow-soft transition-colors hover:bg-coral-700"
             >
               Inscrire mon enfant
             </Link>
