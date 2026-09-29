@@ -40,7 +40,10 @@ export function FournituresPage() {
         imageAlt="Fournitures scolaires disposées sur un fond crème"
         actions={
           <>
-            <Action href={`#listes`} arrow={false}>
+            <Action
+              onClick={() => document.getElementById("listes")?.scrollIntoView({ behavior: "smooth" })}
+              arrow={false}
+            >
               Voir les listes par cycle
             </Action>
             <Action to="/contact" variant="secondary">
