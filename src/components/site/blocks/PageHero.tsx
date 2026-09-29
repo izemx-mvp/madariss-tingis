@@ -106,14 +106,7 @@ export function HeroFull({
           <SectionLabel chapter={chapter} tone="light">
             {eyebrow}
           </SectionLabel>
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-6 font-display text-4xl leading-[1.04] text-white md:text-7xl"
-          >
-            {title}
-          </motion.h1>
+          <h1 className="mt-6 font-display text-4xl leading-[1.04] text-white md:text-7xl">{title}</h1>
           <p className="mt-6 max-w-2xl text-lg text-white/85">{lead}</p>
           {actions ? <div className="mt-8 flex flex-wrap gap-3">{actions}</div> : null}
           {children}
