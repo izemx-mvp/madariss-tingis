@@ -9,7 +9,7 @@ type ContactSearch = { objet?: string };
 
 export const Route = createFileRoute("/contact")({
   validateSearch: (search: Record<string, unknown>): ContactSearch =>
-    typeof search.objet === "string" && search.objet.length > 0 ? { objet: search.objet.slice(0, 80) } : {},
+    typeof search['objet'] === "string" && search['objet'].length > 0 ? { objet: search['objet'].slice(0, 80) } : {},
   head: () => ({
     meta: [
       { title: "Contact — Madariss Tingis, Tanger" },
