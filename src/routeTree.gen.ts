@@ -37,6 +37,7 @@ import { Route as TheatreRouteImport } from './routes/theatre'
 import { Route as TransportScolaireRouteImport } from './routes/transport-scolaire'
 import { Route as VacancesScolairesRouteImport } from './routes/vacances-scolaires'
 import { Route as VideosRouteImport } from './routes/videos'
+import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as EvenementsSlugRouteImport } from './routes/evenements.$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -180,6 +181,11 @@ const VideosRoute = VideosRouteImport.update({
   path: '/videos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiChatRoute = ApiChatRouteImport.update({
+  id: '/api/chat',
+  path: '/api/chat',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EvenementsSlugRoute = EvenementsSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -215,6 +221,7 @@ export interface FileRoutesByFullPath {
   '/transport-scolaire': typeof TransportScolaireRoute
   '/vacances-scolaires': typeof VacancesScolairesRoute
   '/videos': typeof VideosRoute
+  '/api/chat': typeof ApiChatRoute
   '/evenements/$slug': typeof EvenementsSlugRoute
 }
 export interface FileRoutesByTo {
@@ -246,6 +253,7 @@ export interface FileRoutesByTo {
   '/transport-scolaire': typeof TransportScolaireRoute
   '/vacances-scolaires': typeof VacancesScolairesRoute
   '/videos': typeof VideosRoute
+  '/api/chat': typeof ApiChatRoute
   '/evenements/$slug': typeof EvenementsSlugRoute
 }
 export interface FileRoutesById {
@@ -278,6 +286,7 @@ export interface FileRoutesById {
   '/transport-scolaire': typeof TransportScolaireRoute
   '/vacances-scolaires': typeof VacancesScolairesRoute
   '/videos': typeof VideosRoute
+  '/api/chat': typeof ApiChatRoute
   '/evenements/$slug': typeof EvenementsSlugRoute
 }
 export interface FileRouteTypes {
@@ -311,6 +320,7 @@ export interface FileRouteTypes {
     | '/transport-scolaire'
     | '/vacances-scolaires'
     | '/videos'
+    | '/api/chat'
     | '/evenements/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -342,6 +352,7 @@ export interface FileRouteTypes {
     | '/transport-scolaire'
     | '/vacances-scolaires'
     | '/videos'
+    | '/api/chat'
     | '/evenements/$slug'
   id:
     | '__root__'
@@ -373,6 +384,7 @@ export interface FileRouteTypes {
     | '/transport-scolaire'
     | '/vacances-scolaires'
     | '/videos'
+    | '/api/chat'
     | '/evenements/$slug'
   fileRoutesById: FileRoutesById
 }
@@ -405,6 +417,7 @@ export interface RootRouteChildren {
   TransportScolaireRoute: typeof TransportScolaireRoute
   VacancesScolairesRoute: typeof VacancesScolairesRoute
   VideosRoute: typeof VideosRoute
+  ApiChatRoute: typeof ApiChatRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -605,6 +618,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VideosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/chat': {
+      id: '/api/chat'
+      path: '/api/chat'
+      fullPath: '/api/chat'
+      preLoaderRoute: typeof ApiChatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/evenements/$slug': {
       id: '/evenements/$slug'
       path: '/$slug'
@@ -656,6 +676,7 @@ const rootRouteChildren: RootRouteChildren = {
   TransportScolaireRoute: TransportScolaireRoute,
   VacancesScolairesRoute: VacancesScolairesRoute,
   VideosRoute: VideosRoute,
+  ApiChatRoute: ApiChatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
