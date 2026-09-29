@@ -1,4 +1,4 @@
-import { Award, CalendarDays, GraduationCap, MonitorSmartphone, Users } from "lucide-react";
+import { Award, CalendarDays, MonitorSmartphone, Users } from "lucide-react";
 import { HeroFull } from "@/components/site/blocks/PageHero";
 import { Section } from "@/components/site/blocks/Section";
 import { IconCardGrid } from "@/components/site/blocks/IconCardGrid";
@@ -177,10 +177,6 @@ export function NoteRentreePage() {
           { to: "/nos-eleves", label: "Nos élèves", desc: "Les activités et les réussites de l'année." },
         ]}
       />
-
-      <span className="hidden">
-        <GraduationCap aria-hidden="true" />
-      </span>
     </>
   );
 }
