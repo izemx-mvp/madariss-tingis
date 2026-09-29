@@ -1,30 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SimplePage } from "@/components/site/blocks/SimplePage";
+import { VacancesPage } from "@/components/pages/vacances/VacancesPage";
+
+const description =
+  "Vacances scolaires à Madariss Tingis, Tanger : le rythme de l'année de septembre à juin et la communication des dates aux familles via Pronote.";
 
 export const Route = createFileRoute("/vacances-scolaires")({
   head: () => ({
     meta: [
-      { title: "Vacances scolaires — Madariss Tingis, école privée à Tanger" },
-      { name: "description", content: "Le rythme de l'année scolaire." },
+      { title: "Vacances scolaires — Madariss Tingis, Tanger" },
+      { name: "description", content: description },
       { property: "og:title", content: "Vacances scolaires — Madariss Tingis" },
-      { property: "og:description", content: "Le rythme de l'année scolaire." },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Page,
+  component: VacancesPage,
 });
-
-function Page() {
-  return (
-    <SimplePage
-      chapter="09"
-      eyebrow="Vie scolaire"
-      title="Vacances scolaires"
-      lead="Le rythme de l'année scolaire."
-      points={[
-        { title: "Programme marocain officiel", text: "Un enseignement conforme au programme officiel, avec un français renforcé et un anglais valorisé." },
-        { title: "Un suivi avec les familles", text: "Pronote est l'outil privilégié de communication entre l'école et les parents." },
-        { title: "L'administration à votre écoute", text: "Pour toute information pratique, contactez l'administration par téléphone ou par email." },
-      ]}
-    />
-  );
-}

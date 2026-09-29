@@ -16,3 +16,15 @@ Chaque ligne : page + information manquante.
 - /mentions-legales — Raison sociale, forme juridique, RC, ICE, directeur de publication, hébergeur.
 - /politique-de-confidentialite — Déclaration CNDP (loi 09-08) et durée de conservation des données des formulaires.
 - /carriere — Domaines réellement ouverts au recrutement et adresse de réception des candidatures.
+
+## Horaires du collège
+Les horaires du collège diffèrent entre l'ancien site (8h30–15h30) et le règlement intérieur (8h00–16h00).
+Le site retient la version du règlement intérieur. À confirmer avec l'administration.
+
+## Vacances scolaires
+Seule la rentrée de septembre est confirmée. Les autres périodes (automne, hiver, printemps, examens, fin d'année)
+sont affichées avec la mention « Dates communiquées via Pronote ». Fichier : src/data/calendar.ts.
+
+## Listes de fournitures
+Aucune liste de fournitures n'a été fournie. Les onglets par cycle affichent un message d'attente.
+Fichier : src/data/supplies.ts (champ `file` à renseigner avec l'URL du document).
