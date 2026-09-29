@@ -1,30 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SimplePage } from "@/components/site/blocks/SimplePage";
+import { NosElevesPage } from "@/components/pages/nos-eleves/NosElevesPage";
+
+const description =
+  "Nos élèves à Madariss Tingis, Tanger : travail d'équipe, autonomie, créativité et goût de l'effort, à travers le théâtre, les échecs, la musique et le sport.";
 
 export const Route = createFileRoute("/nos-eleves")({
   head: () => ({
     meta: [
-      { title: "Nos élèves — Madariss Tingis, école privée à Tanger" },
-      { name: "description", content: "Créativité et leadership, au-delà des cours." },
+      { title: "Nos élèves — Créativité & leadership — Madariss Tingis" },
+      { name: "description", content: description },
       { property: "og:title", content: "Nos élèves — Madariss Tingis" },
-      { property: "og:description", content: "Créativité et leadership, au-delà des cours." },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Page,
+  component: NosElevesPage,
 });
-
-function Page() {
-  return (
-    <SimplePage
-      chapter="10"
-      eyebrow="Vie scolaire"
-      title="Nos élèves"
-      lead="Créativité et leadership, au-delà des cours."
-      points={[
-        { title: "Programme marocain officiel", text: "Un enseignement conforme au programme officiel, avec un français renforcé et un anglais valorisé." },
-        { title: "Un suivi avec les familles", text: "Pronote est l'outil privilégié de communication entre l'école et les parents." },
-        { title: "L'administration à votre écoute", text: "Pour toute information pratique, contactez l'administration par téléphone ou par email." },
-      ]}
-    />
-  );
-}
