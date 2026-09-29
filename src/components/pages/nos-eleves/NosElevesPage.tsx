@@ -131,7 +131,7 @@ export function NosElevesPage() {
               </span>
               <h3 className="mt-5 font-display text-3xl md:text-4xl">Master Chef Junior</h3>
               <p className="mt-4 text-ink-600">
-                Un concours culinaire où les élèves组 forment des équipes, imaginent une recette et la présentent devant
+                Un concours culinaire où les élèves forment des équipes, imaginent une recette et la présentent devant
                 un jury. Créativité, organisation et travail d'équipe, tout y passe.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
