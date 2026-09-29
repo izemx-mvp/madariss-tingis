@@ -17,7 +17,7 @@ export const Route = createFileRoute("/api/chat")({
   server: {
     handlers: {
       POST: async ({ request }) => {
-        const apiKey = process.env.LOVABLE_API_KEY;
+        const apiKey = process.env['LOVABLE_API_KEY'];
         if (!apiKey) return new Response("Assistant non configuré", { status: 500 });
         const body = (await request.json()) as { messages?: UIMessage[] };
         if (!Array.isArray(body.messages)) return new Response("Requête invalide", { status: 400 });
