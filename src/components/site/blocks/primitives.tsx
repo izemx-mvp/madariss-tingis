@@ -41,7 +41,7 @@ export function SectionLabel({
   chapter: string;
   children: ReactNode;
   tone?: "coral" | "teal" | "light";
-  className?: string;
+  className?: string | undefined;
 }) {
   const tones = {
     coral: "text-coral-700 border-coral-500/40",
