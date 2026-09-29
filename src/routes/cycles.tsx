@@ -1,30 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SimplePage } from "@/components/site/blocks/SimplePage";
+import { CyclesPage } from "@/components/pages/cycles/CyclesPage";
+
+const description =
+  "Maternelle, primaire, collège et lycée à Madariss Tingis Tanger : apprentissages, langues, horaires et préparation du baccalauréat scientifique.";
 
 export const Route = createFileRoute("/cycles")({
   head: () => ({
     meta: [
-      { title: "Nos cycles — Madariss Tingis, école privée à Tanger" },
-      { name: "description", content: "Maternelle, primaire, collège et lycée : un parcours continu." },
+      { title: "Nos cycles — Madariss Tingis, Tanger" },
+      { name: "description", content: description },
       { property: "og:title", content: "Nos cycles — Madariss Tingis" },
-      { property: "og:description", content: "Maternelle, primaire, collège et lycée : un parcours continu." },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Page,
+  component: CyclesPage,
 });
-
-function Page() {
-  return (
-    <SimplePage
-      chapter="03"
-      eyebrow="Présentation"
-      title="Nos cycles"
-      lead="Maternelle, primaire, collège et lycée : un parcours continu."
-      points={[
-        { title: "Programme marocain officiel", text: "Un enseignement conforme au programme officiel, avec un français renforcé et un anglais valorisé." },
-        { title: "Un suivi avec les familles", text: "Pronote est l'outil privilégié de communication entre l'école et les parents." },
-        { title: "L'administration à votre écoute", text: "Pour toute information pratique, contactez l'administration par téléphone ou par email." },
-      ]}
-    />
-  );
-}
