@@ -1,12 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
-import { Action, ArabicWatermark, SectionLabel } from "./primitives";
+import { Action, ArabicWatermark, Badge, SectionLabel } from "./primitives";
 import { WaveDivider } from "./WaveDivider";
 import { CtaBand } from "./CtaBand";
 
 /**
  * Page de transition utilisée tant que la page complète n'a pas été construite
  * (lots suivants). Jamais un simple titre : hero illustré + repères + CTA.
+ * Test de synchronisation GitHub ↔ Lovable : badge "Page en préparation".
  */
 export function SimplePage({
   chapter,
@@ -36,7 +37,10 @@ export function SimplePage({
             <span className="mx-2">/</span>
             <span className="text-ink-900">{title}</span>
           </nav>
-          <SectionLabel chapter={chapter}>{eyebrow}</SectionLabel>
+          <div className="flex flex-wrap items-center gap-3">
+            <SectionLabel chapter={chapter}>{eyebrow}</SectionLabel>
+            <Badge tone="teal">Page en préparation</Badge>
+          </div>
           <h1 className="mt-5 max-w-3xl font-display text-4xl md:text-6xl">{title}</h1>
           <p className="mt-5 max-w-2xl text-lg text-ink-600">{lead}</p>
         </div>
