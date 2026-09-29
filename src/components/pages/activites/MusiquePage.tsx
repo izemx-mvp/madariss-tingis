@@ -26,7 +26,7 @@ function SoundWave() {
             key={i}
             className={cn("w-1.5 rounded-full md:w-2", i % 3 === 0 ? "bg-coral-500" : "bg-teal-500")}
             initial={{ height: `${base}%` }}
-            animate={reduce ? undefined : { height: [`${base}%`, `${Math.max(12, 100 - base)}%`, `${base}%`] }}
+            animate={reduce ? { height: `${base}%` } : { height: [`${base}%`, `${Math.max(12, 100 - base)}%`, `${base}%`] }}
             transition={{ duration: 1.4 + (i % 5) * 0.2, repeat: Infinity, ease: "easeInOut", delay: i * 0.04 }}
           />
         );
