@@ -122,7 +122,7 @@ const schema = z.object({
     .refine((f) => f instanceof FileList && f.length === 1, "Ajoutez votre CV.")
     .refine((f) => !(f instanceof FileList) || !f[0] || /\.(pdf|docx)$/i.test(f[0].name), "Format accepté : PDF ou DOCX.")
     .refine((f) => !(f instanceof FileList) || !f[0] || f[0].size <= MAX_CV, "5 Mo maximum."),
-  consentement: z.literal(true, { errorMap: () => ({ message: "Votre accord est nécessaire." }) }),
+  consentement: z.literal(true, { error: "Votre accord est nécessaire." }),
 });
 type Values = z.infer<typeof schema>;
 

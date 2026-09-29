@@ -37,7 +37,7 @@ import heroAdmission from "@/assets/hero-admission.jpg";
 /* ---------- Schéma ---------- */
 
 const schema = z.object({
-  civilite: z.enum(["M.", "Mme", "Mlle"], { errorMap: () => ({ message: "Choisissez une civilité." }) }),
+  civilite: z.enum(["M.", "Mme", "Mlle"], { error: "Choisissez une civilité." }),
   nom: z.string().trim().min(2, "Indiquez votre nom.").max(80),
   prenom: z.string().trim().min(2, "Indiquez votre prénom.").max(80),
   telephone: z.string().trim().regex(phoneRegex, "Numéro invalide (ex. 06 12 34 56 78)."),
@@ -59,7 +59,7 @@ const schema = z.object({
   commune: z.string().trim().min(2, "Indiquez la commune.").max(80),
   services: z.array(z.enum(["restauration", "transport"])),
   commentaire: z.string().trim().max(1500, "1 500 caractères maximum.").optional(),
-  consentement: z.literal(true, { errorMap: () => ({ message: "Votre accord est nécessaire pour envoyer la demande." }) }),
+  consentement: z.literal(true, { error: "Votre accord est nécessaire pour envoyer la demande." }),
 });
 
 type FormValues = z.infer<typeof schema>;

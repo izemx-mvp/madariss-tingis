@@ -14,6 +14,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { ChatWidget } from "@/components/site/ChatWidget";
 
 function NotFoundComponent() {
   return (
@@ -146,6 +147,7 @@ function RootComponent() {
           <Outlet />
         </main>
         <Footer />
+        <ChatWidget />
       </div>
     </QueryClientProvider>
   );
