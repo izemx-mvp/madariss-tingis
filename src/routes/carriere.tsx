@@ -1,30 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SimplePage } from "@/components/site/blocks/SimplePage";
+import { CarrierePage } from "@/components/pages/carriere/CarrierePage";
+
+const description =
+  "Rejoignez l'équipe de Madariss Tingis à Tanger : enseignement, vie scolaire, administration. Envoyez votre candidature spontanée.";
 
 export const Route = createFileRoute("/carriere")({
   head: () => ({
     meta: [
-      { title: "Rejoignez l'équipe — Madariss Tingis, école privée à Tanger" },
-      { name: "description", content: "Candidature spontanée : enseignement, vie scolaire, administration." },
-      { property: "og:title", content: "Rejoignez l'équipe — Madariss Tingis" },
-      { property: "og:description", content: "Candidature spontanée : enseignement, vie scolaire, administration." },
+      { title: "Carrière — Madariss Tingis, Tanger" },
+      { name: "description", content: description },
+      { property: "og:title", content: "Carrière — Madariss Tingis" },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Page,
+  component: CarrierePage,
 });
-
-function Page() {
-  return (
-    <SimplePage
-      chapter="24"
-      eyebrow="Carrière"
-      title="Rejoignez l'équipe"
-      lead="Candidature spontanée : enseignement, vie scolaire, administration."
-      points={[
-        { title: "Programme marocain officiel", text: "Un enseignement conforme au programme officiel, avec un français renforcé et un anglais valorisé." },
-        { title: "Un suivi avec les familles", text: "Pronote est l'outil privilégié de communication entre l'école et les parents." },
-        { title: "L'administration à votre écoute", text: "Pour toute information pratique, contactez l'administration par téléphone ou par email." },
-      ]}
-    />
-  );
-}

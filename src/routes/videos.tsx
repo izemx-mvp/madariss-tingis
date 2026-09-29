@@ -1,30 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SimplePage } from "@/components/site/blocks/SimplePage";
+import { VideosPage } from "@/components/pages/galeries/VideosPage";
+
+const description =
+  "La galerie vidéo de Madariss Tingis, Tanger : spectacles, activités et temps forts de l'école.";
 
 export const Route = createFileRoute("/videos")({
   head: () => ({
     meta: [
-      { title: "Galerie vidéo — Madariss Tingis, école privée à Tanger" },
-      { name: "description", content: "L'école en mouvement." },
+      { title: "Galerie vidéo — Madariss Tingis, Tanger" },
+      { name: "description", content: description },
       { property: "og:title", content: "Galerie vidéo — Madariss Tingis" },
-      { property: "og:description", content: "L'école en mouvement." },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Page,
+  component: VideosPage,
 });
-
-function Page() {
-  return (
-    <SimplePage
-      chapter="23"
-      eyebrow="Activités"
-      title="Galerie vidéo"
-      lead="L'école en mouvement."
-      points={[
-        { title: "Programme marocain officiel", text: "Un enseignement conforme au programme officiel, avec un français renforcé et un anglais valorisé." },
-        { title: "Un suivi avec les familles", text: "Pronote est l'outil privilégié de communication entre l'école et les parents." },
-        { title: "L'administration à votre écoute", text: "Pour toute information pratique, contactez l'administration par téléphone ou par email." },
-      ]}
-    />
-  );
-}

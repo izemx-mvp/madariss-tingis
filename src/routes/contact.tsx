@@ -1,30 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SimplePage } from "@/components/site/blocks/SimplePage";
+import { ContactPage } from "@/components/pages/contact/ContactPage";
+
+const description =
+  "Contactez Madariss Tingis, école privée à Tanger : formulaire, téléphone, email, plan d'accès (km 5,5 Route de Rabat, Ziaten).";
+
+/** ?objet=... préremplit l'objet du formulaire. */
+type ContactSearch = { objet?: string };
 
 export const Route = createFileRoute("/contact")({
+  validateSearch: (search: Record<string, unknown>): ContactSearch =>
+    typeof search.objet === "string" && search.objet.length > 0 ? { objet: search.objet.slice(0, 80) } : {},
   head: () => ({
     meta: [
-      { title: "Nous contacter — Madariss Tingis, école privée à Tanger" },
-      { name: "description", content: "Une question ? L'administration vous répond." },
-      { property: "og:title", content: "Nous contacter — Madariss Tingis" },
-      { property: "og:description", content: "Une question ? L'administration vous répond." },
+      { title: "Contact — Madariss Tingis, Tanger" },
+      { name: "description", content: description },
+      { property: "og:title", content: "Contact — Madariss Tingis" },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Page,
+  component: ContactPage,
 });
-
-function Page() {
-  return (
-    <SimplePage
-      chapter="25"
-      eyebrow="Contact"
-      title="Nous contacter"
-      lead="Une question ? L'administration vous répond."
-      points={[
-        { title: "Programme marocain officiel", text: "Un enseignement conforme au programme officiel, avec un français renforcé et un anglais valorisé." },
-        { title: "Un suivi avec les familles", text: "Pronote est l'outil privilégié de communication entre l'école et les parents." },
-        { title: "L'administration à votre écoute", text: "Pour toute information pratique, contactez l'administration par téléphone ou par email." },
-      ]}
-    />
-  );
-}

@@ -1,30 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SimplePage } from "@/components/site/blocks/SimplePage";
+import { FraisPage } from "@/components/pages/frais/FraisPage";
+
+const description =
+  "Frais de scolarité de Madariss Tingis à Tanger : droits annuels d'inscription, paiement mensuel avant le 05 et grille tarifaire sur demande.";
 
 export const Route = createFileRoute("/frais-de-scolarite")({
   head: () => ({
     meta: [
-      { title: "Frais de scolarité — Madariss Tingis, école privée à Tanger" },
-      { name: "description", content: "Comment fonctionnent les droits d'inscription et la scolarité." },
+      { title: "Frais de scolarité — Madariss Tingis, Tanger" },
+      { name: "description", content: description },
       { property: "og:title", content: "Frais de scolarité — Madariss Tingis" },
-      { property: "og:description", content: "Comment fonctionnent les droits d'inscription et la scolarité." },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Page,
+  component: FraisPage,
 });
-
-function Page() {
-  return (
-    <SimplePage
-      chapter="15"
-      eyebrow="Inscription"
-      title="Frais de scolarité"
-      lead="Comment fonctionnent les droits d'inscription et la scolarité."
-      points={[
-        { title: "Programme marocain officiel", text: "Un enseignement conforme au programme officiel, avec un français renforcé et un anglais valorisé." },
-        { title: "Un suivi avec les familles", text: "Pronote est l'outil privilégié de communication entre l'école et les parents." },
-        { title: "L'administration à votre écoute", text: "Pour toute information pratique, contactez l'administration par téléphone ou par email." },
-      ]}
-    />
-  );
-}

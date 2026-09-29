@@ -200,7 +200,7 @@ export function VacancesPage() {
         links={[
           { to: "/calendrier", label: "Calendrier", desc: "Les temps forts de l'année scolaire." },
           { to: "/horaires", label: "Horaires", desc: "La journée et la semaine, niveau par niveau." },
-          { to: "/note-de-rentree-2025-2026", label: "Note de rentrée", desc: "Le mot de l'équipe pour l'année en cours." },
+          { to: "/note-de-rentree-2026-2027", label: "Note de rentrée", desc: "Le mot de l'équipe pour l'année en cours." },
         ]}
       />
     </>

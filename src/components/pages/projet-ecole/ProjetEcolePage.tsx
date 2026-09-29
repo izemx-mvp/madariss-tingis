@@ -313,7 +313,7 @@ export function ProjetEcolePage() {
         links={[
           { to: "/mission", label: "Notre mission", desc: "Les trois piliers et les six engagements." },
           { to: "/cycles", label: "Nos cycles", desc: "De la maternelle au baccalauréat scientifique." },
-          { to: "/note-de-rentree-2025-2026", label: "Note de rentrée", desc: "Les nouveautés de l'année scolaire." },
+          { to: "/note-de-rentree-2026-2027", label: "Note de rentrée", desc: "Les nouveautés de l'année scolaire." },
         ]}
       />
     </>

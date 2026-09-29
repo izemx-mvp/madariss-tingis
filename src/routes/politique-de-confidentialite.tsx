@@ -1,30 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SimplePage } from "@/components/site/blocks/SimplePage";
+import { ConfidentialitePage } from "@/components/pages/legal/ConfidentialitePage";
+
+const description =
+  "Politique de confidentialité de Madariss Tingis : données collectées, finalités, durée de conservation et droits (loi 09-08).";
 
 export const Route = createFileRoute("/politique-de-confidentialite")({
   head: () => ({
     meta: [
-      { title: "Politique de confidentialité — Madariss Tingis, école privée à Tanger" },
-      { name: "description", content: "Traitement des données personnelles conformément à la loi 09-08." },
+      { title: "Politique de confidentialité — Madariss Tingis, Tanger" },
+      { name: "description", content: description },
       { property: "og:title", content: "Politique de confidentialité — Madariss Tingis" },
-      { property: "og:description", content: "Traitement des données personnelles conformément à la loi 09-08." },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Page,
+  component: ConfidentialitePage,
 });
-
-function Page() {
-  return (
-    <SimplePage
-      chapter="26"
-      eyebrow="Informations"
-      title="Politique de confidentialité"
-      lead="Traitement des données personnelles conformément à la loi 09-08."
-      points={[
-        { title: "Programme marocain officiel", text: "Un enseignement conforme au programme officiel, avec un français renforcé et un anglais valorisé." },
-        { title: "Un suivi avec les familles", text: "Pronote est l'outil privilégié de communication entre l'école et les parents." },
-        { title: "L'administration à votre écoute", text: "Pour toute information pratique, contactez l'administration par téléphone ou par email." },
-      ]}
-    />
-  );
-}

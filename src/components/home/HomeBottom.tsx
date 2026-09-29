@@ -312,7 +312,7 @@ export function MotEtEvenement() {
             bien pleine. »
           </blockquote>
           <p className="mt-6 font-semibold">L'équipe {site.name}</p>
-          <Action to="/note-de-rentree-2025-2026" variant="tertiary" className="mt-4">
+          <Action to="/note-de-rentree-2026-2027" variant="tertiary" className="mt-4">
             Lire la note de rentrée
           </Action>
         </div>

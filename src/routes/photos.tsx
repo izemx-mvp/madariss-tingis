@@ -1,30 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SimplePage } from "@/components/site/blocks/SimplePage";
+import { PhotosPage } from "@/components/pages/galeries/PhotosPage";
+
+const description =
+  "La galerie photos de Madariss Tingis, Tanger : sport, théâtre, échecs, musique et vie scolaire.";
 
 export const Route = createFileRoute("/photos")({
   head: () => ({
     meta: [
-      { title: "Galerie photos — Madariss Tingis, école privée à Tanger" },
-      { name: "description", content: "Nos moments en images." },
+      { title: "Galerie photos — Madariss Tingis, Tanger" },
+      { name: "description", content: description },
       { property: "og:title", content: "Galerie photos — Madariss Tingis" },
-      { property: "og:description", content: "Nos moments en images." },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Page,
+  component: PhotosPage,
 });
-
-function Page() {
-  return (
-    <SimplePage
-      chapter="22"
-      eyebrow="Activités"
-      title="Galerie photos"
-      lead="Nos moments en images."
-      points={[
-        { title: "Programme marocain officiel", text: "Un enseignement conforme au programme officiel, avec un français renforcé et un anglais valorisé." },
-        { title: "Un suivi avec les familles", text: "Pronote est l'outil privilégié de communication entre l'école et les parents." },
-        { title: "L'administration à votre écoute", text: "Pour toute information pratique, contactez l'administration par téléphone ou par email." },
-      ]}
-    />
-  );
-}

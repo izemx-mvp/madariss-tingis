@@ -26,7 +26,7 @@ import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
 import { Route as MissionRouteImport } from './routes/mission'
 import { Route as MusiqueRouteImport } from './routes/musique'
 import { Route as NosElevesRouteImport } from './routes/nos-eleves'
-import { Route as NoteDeRentree20252026RouteImport } from './routes/note-de-rentree-2025-2026'
+import { Route as NoteDeRentree20262027RouteImport } from './routes/note-de-rentree-2026-2027'
 import { Route as PhotosRouteImport } from './routes/photos'
 import { Route as PolitiqueDeConfidentialiteRouteImport } from './routes/politique-de-confidentialite'
 import { Route as ProjetEcoleRouteImport } from './routes/projet-ecole'
@@ -124,9 +124,9 @@ const NosElevesRoute = NosElevesRouteImport.update({
   path: '/nos-eleves',
   getParentRoute: () => rootRouteImport,
 } as any)
-const NoteDeRentree20252026Route = NoteDeRentree20252026RouteImport.update({
-  id: '/note-de-rentree-2025-2026',
-  path: '/note-de-rentree-2025-2026',
+const NoteDeRentree20262027Route = NoteDeRentree20262027RouteImport.update({
+  id: '/note-de-rentree-2026-2027',
+  path: '/note-de-rentree-2026-2027',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PhotosRoute = PhotosRouteImport.update({
@@ -204,7 +204,7 @@ export interface FileRoutesByFullPath {
   '/mission': typeof MissionRoute
   '/musique': typeof MusiqueRoute
   '/nos-eleves': typeof NosElevesRoute
-  '/note-de-rentree-2025-2026': typeof NoteDeRentree20252026Route
+  '/note-de-rentree-2026-2027': typeof NoteDeRentree20262027Route
   '/photos': typeof PhotosRoute
   '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
   '/projet-ecole': typeof ProjetEcoleRoute
@@ -235,7 +235,7 @@ export interface FileRoutesByTo {
   '/mission': typeof MissionRoute
   '/musique': typeof MusiqueRoute
   '/nos-eleves': typeof NosElevesRoute
-  '/note-de-rentree-2025-2026': typeof NoteDeRentree20252026Route
+  '/note-de-rentree-2026-2027': typeof NoteDeRentree20262027Route
   '/photos': typeof PhotosRoute
   '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
   '/projet-ecole': typeof ProjetEcoleRoute
@@ -267,7 +267,7 @@ export interface FileRoutesById {
   '/mission': typeof MissionRoute
   '/musique': typeof MusiqueRoute
   '/nos-eleves': typeof NosElevesRoute
-  '/note-de-rentree-2025-2026': typeof NoteDeRentree20252026Route
+  '/note-de-rentree-2026-2027': typeof NoteDeRentree20262027Route
   '/photos': typeof PhotosRoute
   '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
   '/projet-ecole': typeof ProjetEcoleRoute
@@ -300,7 +300,7 @@ export interface FileRouteTypes {
     | '/mission'
     | '/musique'
     | '/nos-eleves'
-    | '/note-de-rentree-2025-2026'
+    | '/note-de-rentree-2026-2027'
     | '/photos'
     | '/politique-de-confidentialite'
     | '/projet-ecole'
@@ -331,7 +331,7 @@ export interface FileRouteTypes {
     | '/mission'
     | '/musique'
     | '/nos-eleves'
-    | '/note-de-rentree-2025-2026'
+    | '/note-de-rentree-2026-2027'
     | '/photos'
     | '/politique-de-confidentialite'
     | '/projet-ecole'
@@ -362,7 +362,7 @@ export interface FileRouteTypes {
     | '/mission'
     | '/musique'
     | '/nos-eleves'
-    | '/note-de-rentree-2025-2026'
+    | '/note-de-rentree-2026-2027'
     | '/photos'
     | '/politique-de-confidentialite'
     | '/projet-ecole'
@@ -394,7 +394,7 @@ export interface RootRouteChildren {
   MissionRoute: typeof MissionRoute
   MusiqueRoute: typeof MusiqueRoute
   NosElevesRoute: typeof NosElevesRoute
-  NoteDeRentree20252026Route: typeof NoteDeRentree20252026Route
+  NoteDeRentree20262027Route: typeof NoteDeRentree20262027Route
   PhotosRoute: typeof PhotosRoute
   PolitiqueDeConfidentialiteRoute: typeof PolitiqueDeConfidentialiteRoute
   ProjetEcoleRoute: typeof ProjetEcoleRoute
@@ -528,11 +528,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NosElevesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/note-de-rentree-2025-2026': {
-      id: '/note-de-rentree-2025-2026'
-      path: '/note-de-rentree-2025-2026'
-      fullPath: '/note-de-rentree-2025-2026'
-      preLoaderRoute: typeof NoteDeRentree20252026RouteImport
+    '/note-de-rentree-2026-2027': {
+      id: '/note-de-rentree-2026-2027'
+      path: '/note-de-rentree-2026-2027'
+      fullPath: '/note-de-rentree-2026-2027'
+      preLoaderRoute: typeof NoteDeRentree20262027RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/photos': {
@@ -645,7 +645,7 @@ const rootRouteChildren: RootRouteChildren = {
   MissionRoute: MissionRoute,
   MusiqueRoute: MusiqueRoute,
   NosElevesRoute: NosElevesRoute,
-  NoteDeRentree20252026Route: NoteDeRentree20252026Route,
+  NoteDeRentree20262027Route: NoteDeRentree20262027Route,
   PhotosRoute: PhotosRoute,
   PolitiqueDeConfidentialiteRoute: PolitiqueDeConfidentialiteRoute,
   ProjetEcoleRoute: ProjetEcoleRoute,

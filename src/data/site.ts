@@ -1,4 +1,4 @@
-export const SCHOOL_YEAR = "2025/2026";
+export const SCHOOL_YEAR = "2026/2027";
 
 export const site = {
   name: "Madariss Tingis",

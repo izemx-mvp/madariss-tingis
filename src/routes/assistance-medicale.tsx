@@ -1,30 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SimplePage } from "@/components/site/blocks/SimplePage";
+import { AssistanceMedicalePage } from "@/components/pages/assistance-medicale/AssistanceMedicalePage";
+
+const description =
+  "Santé et bien-être à Madariss Tingis, Tanger : que faire si votre enfant est malade, justificatifs, certificat de non-contagion et bons réflexes d'hygiène.";
 
 export const Route = createFileRoute("/assistance-medicale")({
   head: () => ({
     meta: [
-      { title: "Assistance médicale — Madariss Tingis, école privée à Tanger" },
-      { name: "description", content: "Santé et bien-être des élèves au quotidien." },
+      { title: "Assistance médicale — Madariss Tingis, Tanger" },
+      { name: "description", content: description },
       { property: "og:title", content: "Assistance médicale — Madariss Tingis" },
-      { property: "og:description", content: "Santé et bien-être des élèves au quotidien." },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Page,
+  component: AssistanceMedicalePage,
 });
-
-function Page() {
-  return (
-    <SimplePage
-      chapter="11"
-      eyebrow="Services"
-      title="Assistance médicale"
-      lead="Santé et bien-être des élèves au quotidien."
-      points={[
-        { title: "Programme marocain officiel", text: "Un enseignement conforme au programme officiel, avec un français renforcé et un anglais valorisé." },
-        { title: "Un suivi avec les familles", text: "Pronote est l'outil privilégié de communication entre l'école et les parents." },
-        { title: "L'administration à votre écoute", text: "Pour toute information pratique, contactez l'administration par téléphone ou par email." },
-      ]}
-    />
-  );
-}

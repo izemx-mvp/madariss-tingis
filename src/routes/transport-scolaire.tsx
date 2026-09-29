@@ -1,30 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SimplePage } from "@/components/site/blocks/SimplePage";
+import { TransportPage } from "@/components/pages/transport/TransportPage";
+
+const description =
+  "Le transport scolaire de Madariss Tingis à Tanger : comment faire une demande, règles de sécurité à bord et horaires clés.";
 
 export const Route = createFileRoute("/transport-scolaire")({
   head: () => ({
     meta: [
-      { title: "Transport scolaire — Madariss Tingis, école privée à Tanger" },
-      { name: "description", content: "Se rendre à l'école en toute sécurité." },
+      { title: "Transport scolaire — Madariss Tingis, Tanger" },
+      { name: "description", content: description },
       { property: "og:title", content: "Transport scolaire — Madariss Tingis" },
-      { property: "og:description", content: "Se rendre à l'école en toute sécurité." },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Page,
+  component: TransportPage,
 });
-
-function Page() {
-  return (
-    <SimplePage
-      chapter="13"
-      eyebrow="Services"
-      title="Transport scolaire"
-      lead="Se rendre à l'école en toute sécurité."
-      points={[
-        { title: "Programme marocain officiel", text: "Un enseignement conforme au programme officiel, avec un français renforcé et un anglais valorisé." },
-        { title: "Un suivi avec les familles", text: "Pronote est l'outil privilégié de communication entre l'école et les parents." },
-        { title: "L'administration à votre écoute", text: "Pour toute information pratique, contactez l'administration par téléphone ou par email." },
-      ]}
-    />
-  );
-}

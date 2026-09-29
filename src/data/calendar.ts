@@ -18,7 +18,7 @@ export const schoolYearPeriods: CalendarPeriod[] = [
     month: "Septembre",
     title: "Rentrée scolaire",
     type: "Rentrée",
-    date: "Septembre 2025",
+    date: "Septembre 2026",
     text: "L'accueil des élèves ouvre l'année scolaire. Les modalités sont précisées aux familles avant la rentrée.",
   },
   {

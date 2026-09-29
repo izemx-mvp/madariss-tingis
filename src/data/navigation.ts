@@ -39,7 +39,7 @@ export const navigation: NavGroup[] = [
     featured: "vie-scolaire",
     links: [
       { to: "/reglement-interieur", label: "Règlement intérieur", desc: "Les règles de la vie à l'école." },
-      { to: "/note-de-rentree-2025-2026", label: "Note de rentrée", desc: "Le mot de l'équipe." },
+      { to: "/note-de-rentree-2026-2027", label: "Note de rentrée", desc: "Le mot de l'équipe." },
       { to: "/conditions-admission", label: "Conditions d'admission", desc: "Les étapes et le dossier." },
       { to: "/fournitures-manuels", label: "Fournitures & Manuels", desc: "Listes et manuels de la BCD." },
       { to: "/horaires", label: "Horaires", desc: "Journée et semaine par niveau." },

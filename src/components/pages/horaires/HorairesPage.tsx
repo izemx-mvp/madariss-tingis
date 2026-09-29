@@ -27,9 +27,9 @@ function LiveClock() {
     return () => clearInterval(id);
   }, []);
 
-  const sec = now ? now.getSeconds() : 0;
-  const min = now ? now.getMinutes() : 0;
-  const hr = now ? now.getHours() % 12 : 0;
+  const sec = now ? now.getUTCSeconds() : 0;
+  const min = now ? now.getUTCMinutes() : 0;
+  const hr = now ? now.getUTCHours() % 12 : 0;
 
   return (
     <div className="mx-auto w-fit rounded-[2.5rem] border border-white/20 bg-white/10 p-8 backdrop-blur">
@@ -56,7 +56,7 @@ function LiveClock() {
         <span className="size-3 rounded-full bg-coral-500" />
       </div>
       <p className="mt-6 text-center font-display text-3xl text-white tabular-nums">
-        {now ? now.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" }) : "--:--"}
+        {now ? now.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", timeZone: "UTC" }) : "--:--"}
       </p>
       <p className="mt-1 text-center text-sm text-white/70">Heure de Tanger</p>
     </div>
